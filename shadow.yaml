@@ -1,0 +1,20 @@
+Eval:
+    datasets: [
+        "sbu",
+        "ucf",
+        "istd",
+        "cuhk"
+    ]
+    gt_roots: [
+        "/dataset/shadow/SBU-shadow/SBU-Test/labels",
+        "/dataset/shadow/UCF/GroundTruth",
+        "/dataset/shadow/ISTD_Dataset/test/test_B",
+        "/dataset/shadow/merged_cuhk/mask"
+    ]
+    strategies: [ # fmeasure or iou
+        "fm",
+        "iou"
+    ]
+    pred_root: "./preds"
+    result_path: "./pred"
+    metrics: ["ber"]
